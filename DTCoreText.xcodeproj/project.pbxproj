@@ -1945,8 +1945,8 @@
 				A7AE58181725381E00A9BF61 /* DTVideoTextAttachment.h in Headers */,
 				A7AE5822172538CC00A9BF61 /* DTIframeTextAttachment.h in Headers */,
 				A7AE582C1725391900A9BF61 /* DTObjectTextAttachment.h in Headers */,
-				A7675E78172EA24700C548CB /* NSAttributedString+DTDebug.h in Headers */,
 				A76D45141732A512006A7CDA /* NSDictionary+DTCoreText.h in Headers */,
+				A7675E78172EA24700C548CB /* NSAttributedString+DTDebug.h in Headers */,
 				A04CF1A51738BC080036E735 /* DTAccessibilityElement.h in Headers */,
 				A04CF1AB1738BC080036E735 /* DTAccessibilityViewProxy.h in Headers */,
 				A04CF1B11738BC080036E735 /* DTCoreTextLayoutFrameAccessibilityElementGenerator.h in Headers */,
@@ -2972,6 +2972,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = RTDemoApp;
 				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -2988,6 +2989,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = RTDemoApp;
 				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -3314,6 +3316,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = RTDemoApp;
 				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
