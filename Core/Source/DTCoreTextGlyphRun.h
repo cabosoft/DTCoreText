@@ -14,6 +14,8 @@
 #import <ApplicationServices/ApplicationServices.h>
 #endif
 
+#import "DTWeakSupport.h"
+
 @class DTCoreTextLayoutLine;
 @class DTTextAttachment;
 
@@ -105,7 +107,7 @@
 /**
  The Core Text attributes that are shared by all gylphs of the receiver
  */
-@property (nonatomic, readonly) NSDictionary *attributes;
+@property (nonatomic, DT_WEAK_PROPERTY, readonly) NSDictionary *attributes;
 
 /**
  Returns `YES` if the receiver is part of a hyperlink, `NO` otherwise
