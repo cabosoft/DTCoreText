@@ -17,6 +17,13 @@ Pod::Spec.new do |spec|
   spec.documentation_url = 'http://docs.cocoanetics.com/DTCoreText'
   spec.social_media_url = 'https://twitter.com/cocoanetics'
   spec.prefix_header_contents = '#import <CoreText/CoreText.h>'
+  spec.pre_install do |pod_representation, library_representation|
+	  Dir.chdir(pod_representation.root + 'Core/Source/') do
+	    Dir.glob('*.css') do |css_file|
+	      system '/usr/bin/xxd', '-i', css_file, css_file + '.c'
+	    end
+	  end
+  end
   spec.prepare_command = <<-CMD
      cd ./Core/Source
      /usr/bin/xxd -i default.css default.css.c
