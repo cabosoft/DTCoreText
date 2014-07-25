@@ -403,17 +403,6 @@
 			
 			[listsToOpen enumerateObjectsUsingBlock:^(DTCSSListStyle *oneList, NSUInteger idx, BOOL *stop) {
 				
-				NSString *name;
-				
-				if ([oneList isOrdered])
-				{
-					name = @"ol";
-				}
-				else
-				{
-					name = @"ul";
-				}
-				
 				// only padding can be reconstructed so far
 				CGFloat listPadding = (paragraphStyle.headIndent - paragraphStyle.firstLineHeadIndent) / _textScale;
 				
@@ -634,6 +623,18 @@
 			}
 			
 			DTTextAttachment *attachment = [attributes objectForKey:NSAttachmentAttributeName];
+
+			if ([plainSubString isEqualToString:UNICODE_OBJECT_PLACEHOLDER]) {
+				
+				// if there was no old-style attachment let's try new NS-style.
+				if (!attachment)
+				{
+					attachment = [attributes objectForKey:@"NSAttachment"];
+				}
+				
+				// we don't want to output the placeholder character in any case
+				subString = @"";
+			}
 			
 			if (attachment)
 			{
@@ -1007,5 +1008,6 @@
 
 @synthesize attributedString = _attributedString;
 @synthesize textScale = _textScale;
+@synthesize useAppleConvertedSpace = _useAppleConvertedSpace;
 
 @end
