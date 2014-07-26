@@ -3,7 +3,7 @@ Pod::Spec.new do |spec|
   spec.version      = '1.6.13'
   spec.platform     = :ios, '4.3'
   spec.license      = 'BSD'
-  spec.source       = { :git => 'https://github.com/cabosoft/DTCoreText.git', :branch => 'master' }
+  spec.source       = { :git => 'https://github.com/cabosoft/DTCoreText.git' }
   spec.source_files = 'Core/Source/*.{h,m,c}'
   spec.dependency 'DTFoundation/Core', '~>1.7.1'
   spec.dependency 'DTFoundation/UIKit', '~>1.7.1'
